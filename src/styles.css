@@ -1,0 +1,109 @@
+@font-face {
+  font-family: "VALORANT";
+  src: url("/Users/daisukemuraishi/Library/Fonts/Valorant Font.ttf");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: VALORANT;
+
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+
+  justify-content: space-evenly;
+}
+
+.right-container {
+  width: 45vh;
+}
+
+.left-container {
+  width: 45vh;
+}
+
+.title-container {
+  height: 15%;
+}
+
+.app-name {
+  color: rgb(255, 255, 255);
+  font-size: 40px;
+}
+
+.id-container {
+  background-color: rgb(0, 0, 0, 0.5);
+
+  height: 10%;
+  outline: 2px solid azure;
+}
+
+.id-title {
+  font-size: 15px;
+  color: azure;
+}
+
+.new-id {
+  font-size: 25px;
+  color: azure;
+  margin-top: 0;
+}
+
+.rank-container {
+  background-color: rgb(0, 0, 0, 0.7);
+
+  height: 7%;
+  outline: 2px solid azure;
+}
+
+.rank-container p {
+  font-size: 15px;
+  color: azure;
+}
+
+.favorite-container {
+  background-color: rgb(0, 0, 0, 0.7);
+
+  height: 15%;
+  outline: 2px solid azure;
+}
+
+.favorite-container p {
+  font-size: 15px;
+  color: azure;
+}
+
+.agent-container {
+  background-color: rgb(0, 0, 0, 0.7);
+  outline: 2px solid azure;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 37%;
+}
+
+.agent-container p {
+  font-size: 15px;
+  color: azure;
+}
+
+.comment-container {
+  background-color: rgb(0, 0, 0, 0.7);
+
+  height: 15%;
+  outline: 2px solid azure;
+}
+
+.comment-container p {
+  font-size: 15px;
+  color: azure;
+}
