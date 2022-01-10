@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/valo-profile-card/static/css/main.67b1ad86.css",
-    "main.js": "/valo-profile-card/static/js/main.5669a253.js",
+    "main.js": "/valo-profile-card/static/js/main.d3431032.js",
     "static/media/BGI.Chanber.png": "/valo-profile-card/static/media/BGI.Chanber.2c3b8dc9d8c53e3f15cd.png",
     "static/media/BGI.Yoru.jpg": "/valo-profile-card/static/media/BGI.Yoru.180ce767d3bef38cdb5e.jpg",
     "static/media/BGI.Phoenix.jpg": "/valo-profile-card/static/media/BGI.Phoenix.06c08125f340595c0dd3.jpg",
@@ -49,10 +49,10 @@
     "static/media/radi_icon.png": "/valo-profile-card/static/media/radi_icon.592b60dc67216031f32e.png",
     "index.html": "/valo-profile-card/index.html",
     "main.67b1ad86.css.map": "/valo-profile-card/static/css/main.67b1ad86.css.map",
-    "main.5669a253.js.map": "/valo-profile-card/static/js/main.5669a253.js.map"
+    "main.d3431032.js.map": "/valo-profile-card/static/js/main.d3431032.js.map"
   },
   "entrypoints": [
     "static/css/main.67b1ad86.css",
-    "static/js/main.5669a253.js"
+    "static/js/main.d3431032.js"
   ]
 }
