@@ -1,3 +1,6 @@
+import React from "react";
+import axios from "axios";
+
 function getAccountApi(id, tag) {
   const AccountApi = `https://asia.api.riotgames.com/riot/account/v1/accounts/by-riot-id/${id}/${tag}?api_key=RGAPI-2cc040ae-77c5-482e-94de-8ffa6fd81a9c`;
   const accountInfo = async () => {
