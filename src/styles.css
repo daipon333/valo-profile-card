@@ -1,6 +1,6 @@
 @font-face {
   font-family: "VALORANT";
-  src: url("/Users/daisukemuraishi/Library/Fonts/Valorant Font.ttf");
+  src: url("./asset/Valorant Font.ttf");
 }
 
 * {
