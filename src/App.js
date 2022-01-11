@@ -8,8 +8,6 @@ import Agents from "./components/Agents";
 import Images from "./components/Images";
 import axios from "axios";
 
-const weaponsApi = "https://valorant-api.com/v1/weapons";
-
 function App() {
   const [id, setId] = React.useState();
   const [newId, setNewId] = React.useState("");
@@ -30,41 +28,6 @@ function App() {
     backgroundImage: `url(${imageChange})`,
     backgroundSize: "cover",
   };
-
-  React.useEffect(() => {
-    weponsInfo();
-  }, []);
-
-  React.useEffect(() => {
-    const AccountApi = `https://asia.api.riotgames.com/riot/account/v1/accounts/by-riot-id/${newId}/${newTag}?api_key=RGAPI-5ac2f301-f238-4d0e-8da6-2fc3f24760ba`;
-    const AccountInfo = async () => {
-      try {
-        const response = await axios.get(AccountApi);
-        console.log(response);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    AccountInfo();
-  }, [handleSubmitClick]);
-
-  const weponsInfo = async () => {
-    try {
-      const response = await axios.get(weaponsApi);
-      console.log(response);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  // const AccountInfo = async () => {
-  //   try {
-  //     const response = await axios.get(AccountApi);
-  //     console.log(response);
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
 
   return (
     <>
