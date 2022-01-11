@@ -6,7 +6,6 @@ import Comment from "./components/Comment";
 import Rank from "./components/Rank";
 import Agents from "./components/Agents";
 import Images from "./components/Images";
-import axios from "axios";
 
 function App() {
   const [imageChange, setImageChange] = React.useState(logo);
