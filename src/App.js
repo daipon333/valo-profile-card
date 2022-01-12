@@ -6,48 +6,24 @@ import Comment from "./components/Comment";
 import Rank from "./components/Rank";
 import Agents from "./components/Agents";
 import Images from "./components/Images";
+<<<<<<< HEAD
 import axios from "axios";
+=======
+>>>>>>> master
 
 function App() {
-  const [id, setId] = React.useState();
-  const [newId, setNewId] = React.useState("");
-  const [tag, setTag] = React.useState("");
-  const [newTag, setNewTag] = React.useState("");
   const [imageChange, setImageChange] = React.useState(logo);
-  const [display, setDisplay] = React.useState(true);
-
-  const handleSubmitClick = () => {
-    if (id === "") return;
-    setNewId(id);
-    setNewTag(tag);
-
-    setDisplay((prev) => !prev);
-  };
-
   const style = {
     backgroundImage: `url(${imageChange})`,
     backgroundSize: "cover",
+    width: "100%",
   };
 
   return (
     <>
       <div className="main-container" style={style}>
         <div className="left-container">
-          {
-            <IdTag
-              id={id}
-              setId={setId}
-              newId={newId}
-              setNewId={setNewId}
-              tag={tag}
-              setTag={setTag}
-              newTag={newTag}
-              setNewTag={setNewTag}
-              handleSubmitClick={handleSubmitClick}
-              display={display}
-              setDisplay={setDisplay}
-            />
-          }
+          {<IdTag />}
           {<Rank />}
           <div className="favorite-container">
             <p>something</p>

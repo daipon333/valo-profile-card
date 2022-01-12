@@ -1,36 +1,22 @@
 import "../styles.css";
 import React from "react";
+import getAccountApi from "./getAccountApi";
 
-function IdTag(props) {
-  const {
-    id,
-    setId,
-    newId,
-    setNewId,
-    tag,
-    setTag,
-    newTag,
-    setNewTag,
-    handleSubmitClick,
-    display,
-    setDisplay,
-  } = props;
-
-  // const [id, setId] = React.useState("");
-  // const [newId, setNewId] = React.useState("");
-  // const [tag, setTag] = React.useState("")
-  // const [display, setDisplay] = React.useState(true);
+function IdTag() {
+  const [id, setId] = React.useState("");
+  const [display, setDisplay] = React.useState(true);
+  const [tag, setTag] = React.useState("");
 
   const handleEditClick = () => {
     setDisplay((prev) => !prev);
   };
-  // const handleSubmitClick = () => {
-  //   if (id === "") return;
-  //   setNewId(id);
-  //   setNewTag(tag);
+  const handleSubmitClick = () => {
+    if (id === "" || tag === "") return;
 
-  //   setDisplay((prev) => !prev);
-  // };
+    setDisplay((prev) => !prev);
+    console.log(id);
+    getAccountApi(id, tag);
+  };
   const handleIdChange = (e) => {
     setId(e.target.value);
   };
@@ -69,10 +55,10 @@ function IdTag(props) {
         ) : (
           <>
             <p className="new-id" onClick={handleEditClick}>
-              {newId}
+              {id}
             </p>
             <p className="new-id" onClick={handleEditClick}>
-              {newTag}
+              {tag}
             </p>
           </>
         )}
