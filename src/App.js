@@ -12,6 +12,7 @@ function App() {
   const style = {
     backgroundImage: `url(${imageChange})`,
     backgroundSize: "cover",
+    width: "100%",
   };
 
   return (
