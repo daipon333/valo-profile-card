@@ -22,15 +22,12 @@ function Images(props) {
     if (setNumberArr) {
       if (!isGray) {
         setNumberArr([...numberArr, backgroundImage]);
-        console.log([...numberArr, backgroundImage]);
       } else if (isGray) {
         const idx = numberArr.indexOf(backgroundImage);
-        console.log(idx);
         if (idx >= 0) {
           const newNumberArr = [...numberArr];
           newNumberArr.splice(idx, 1);
           setNumberArr(newNumberArr);
-          console.log(newNumberArr);
         }
       }
     }
@@ -41,7 +38,6 @@ function Images(props) {
       if (numberArr[0]) {
         const newNumberArr = [...numberArr];
         setImageChange(newNumberArr[0]);
-        console.log(newNumberArr[0]);
       } else if (!numberArr[0]) {
         setImageChange(logo);
       }

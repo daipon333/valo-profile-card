@@ -2,21 +2,14 @@ import "../styles.css";
 import React from "react";
 import getAccountApi from "./getAccountApi";
 
-function IdTag() {
-  const [id, setId] = React.useState("");
-  const [display, setDisplay] = React.useState(true);
-  const [tag, setTag] = React.useState("");
+function IdTag(props) {
+  const { handleSubmitClick, id, setId, display, setDisplay, tag, setTag } =
+    props;
 
   const handleEditClick = () => {
     setDisplay((prev) => !prev);
   };
-  const handleSubmitClick = () => {
-    if (id === "" || tag === "") return;
 
-    setDisplay((prev) => !prev);
-    console.log(id);
-    getAccountApi(id, tag);
-  };
   const handleIdChange = (e) => {
     setId(e.target.value);
   };
@@ -42,25 +35,25 @@ function IdTag() {
               placeholder="IDを入力"
               value={id}
               onChange={handleIdChange}
-              size="55"
+              size="45"
             />
             <input
               className="id-input"
               placeholder="TAGを入力"
               value={tag}
               onChange={handleTagChange}
-              size="55"
+              size="45"
             />
           </>
         ) : (
-          <>
+          <div className="new-id-container">
             <p className="new-id" onClick={handleEditClick}>
               {id}
             </p>
             <p className="new-id" onClick={handleEditClick}>
-              {tag}
+              #{tag}
             </p>
-          </>
+          </div>
         )}
         {display ? <button onClick={handleSubmitClick}>OK</button> : null}
       </div>

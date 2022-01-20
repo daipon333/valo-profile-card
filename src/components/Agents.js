@@ -69,69 +69,67 @@ function Agents(props) {
   const [numberArr, setNumberArr] = React.useState([]);
   return (
     <>
-      <div>
-        <div className="agent-container">
-          <p className="agent-title">Agents</p>
-          <div className="agent-icon-container">
-            <div className="duelist icon">
-              <p className="type-name">Duelist</p>
-              {duelistArr.map((agent, index) => (
-                <Images
-                  img={agent.iconUrl}
-                  index={index}
-                  imageChange={imageChange}
-                  setImageChange={setImageChange}
-                  backgroundImage={agent.backgroundImage}
-                  setNumberArr={setNumberArr}
-                  numberArr={numberArr}
-                />
-              ))}
-            </div>
+      <div className="agent-container">
+        <p className="agent-title">Agents</p>
+        <div className="agent-icon-container">
+          <div className="duelist icon">
+            <p className="type-name">Duelist</p>
+            {duelistArr.map((agent, index) => (
+              <Images
+                img={agent.iconUrl}
+                index={index}
+                imageChange={imageChange}
+                setImageChange={setImageChange}
+                backgroundImage={agent.backgroundImage}
+                setNumberArr={setNumberArr}
+                numberArr={numberArr}
+              />
+            ))}
+          </div>
 
-            <div className="initiator icon">
-              <p className="type-name">Initiator</p>
-              {initiatorArr.map((agent, index) => (
-                <Images
-                  img={agent.iconUrl}
-                  index={index}
-                  imageChange={imageChange}
-                  setImageChange={setImageChange}
-                  backgroundImage={agent.backgroundImage}
-                  setNumberArr={setNumberArr}
-                  numberArr={numberArr}
-                />
-              ))}
-            </div>
+          <div className="initiator icon">
+            <p className="type-name">Initiator</p>
+            {initiatorArr.map((agent, index) => (
+              <Images
+                img={agent.iconUrl}
+                index={index}
+                imageChange={imageChange}
+                setImageChange={setImageChange}
+                backgroundImage={agent.backgroundImage}
+                setNumberArr={setNumberArr}
+                numberArr={numberArr}
+              />
+            ))}
+          </div>
 
-            <div className="controller icon">
-              <p className="type-name">Controller</p>
-              {controllerArr.map((agent, index) => (
-                <Images
-                  img={agent.iconUrl}
-                  index={index}
-                  imageChange={imageChange}
-                  setImageChange={setImageChange}
-                  backgroundImage={agent.backgroundImage}
-                  setNumberArr={setNumberArr}
-                  numberArr={numberArr}
-                />
-              ))}
-            </div>
+          <div className="controller icon">
+            <p className="type-name">Controller</p>
+            {controllerArr.map((agent, index) => (
+              <Images
+                img={agent.iconUrl}
+                index={index}
+                imageChange={imageChange}
+                setImageChange={setImageChange}
+                backgroundImage={agent.backgroundImage}
+                setNumberArr={setNumberArr}
+                numberArr={numberArr}
+              />
+            ))}
+          </div>
 
-            <div className="sentinel icon">
-              <p className="type-name">Sentinel</p>
-              {sentinelArr.map((agent, index) => (
-                <Images
-                  img={agent.iconUrl}
-                  index={index}
-                  imageChange={imageChange}
-                  setImageChange={setImageChange}
-                  backgroundImage={agent.backgroundImage}
-                  setNumberArr={setNumberArr}
-                  numberArr={numberArr}
-                />
-              ))}
-            </div>
+          <div className="sentinel icon">
+            <p className="type-name">Sentinel</p>
+            {sentinelArr.map((agent, index) => (
+              <Images
+                img={agent.iconUrl}
+                index={index}
+                imageChange={imageChange}
+                setImageChange={setImageChange}
+                backgroundImage={agent.backgroundImage}
+                setNumberArr={setNumberArr}
+                numberArr={numberArr}
+              />
+            ))}
           </div>
         </div>
       </div>
