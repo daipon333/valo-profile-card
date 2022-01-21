@@ -36,100 +36,227 @@ import logo from "../images/background-image/valorant3.jpeg";
 import Skye from "../images/background-image/BGI.Skye.jpg";
 import Brimstone from "../images/background-image/Brimstone.jpg";
 import Kayo from "../images/background-image/BGI.Kayo.jpg";
+import AstraSP from "../images/background-image-sp/BGI.Astra.jpg";
+import BreachSP from "../images/background-image-sp/BGI.Breach.jpg";
+import ChanberSP from "../images/background-image-sp/BGI.Chanber.png";
+import JettSP from "../images/background-image-sp/BGI.Jett.jpg";
+import KillJoySP from "../images/background-image-sp/BGI.KillJoy.jpg";
+import OmenSP from "../images/background-image-sp/BGI.Omen.jpg";
+import PhoenixSP from "../images/background-image-sp/BGI.Phoenix.jpg";
+import RazeSP from "../images/background-image-sp/BGI.Raze.jpg";
+import ReynaSP from "../images/background-image-sp/BGI.Reyna.jpg";
+import SageSP from "../images/background-image-sp/BGI.Sage.jpeg";
+import SovaSP from "../images/background-image-sp/BGI.Sova.jpg";
+import CypherSP from "../images/background-image-sp/BGI.Sypher.jpg";
+import ViperSP from "../images/background-image-sp/BGI.Viper.jpg";
+import YoruSP from "../images/background-image-sp/BGI.Yoru.jpg";
+import logoSP from "../images/background-image-sp/valorant3.jpeg";
+import SkyeSP from "../images/background-image-sp/BGI.Skye.jpg";
+import BrimstoneSP from "../images/background-image-sp/Brimstone.jpg";
+import KayoSP from "../images/background-image-sp/BGI.Kayo.jpg";
 
 const duelistArr = [
-  { iconUrl: jet, backgroundImage: Jett, charaName: "jett" },
-  { iconUrl: pho, backgroundImage: Phoenix, charaName: "phoenix" },
-  { iconUrl: raz, backgroundImage: Raze, charaName: "raze" },
-  { iconUrl: rey, backgroundImage: Reyna, charaName: "reyna" },
-  { iconUrl: yor, backgroundImage: Yoru, charaName: "yoru" },
+  {
+    iconUrl: jet,
+    backgroundImage: Jett,
+    backgroundImageSp: JettSP,
+    charaName: "jett",
+  },
+  {
+    iconUrl: pho,
+    backgroundImage: Phoenix,
+    backgroundImageSp: PhoenixSP,
+    charaName: "phoenix",
+  },
+  {
+    iconUrl: raz,
+    backgroundImage: Raze,
+    backgroundImageSp: RazeSP,
+    charaName: "raze",
+  },
+  {
+    iconUrl: rey,
+    backgroundImage: Reyna,
+    backgroundImageSp: ReynaSP,
+    charaName: "reyna",
+  },
+  {
+    iconUrl: yor,
+    backgroundImage: Yoru,
+    backgroundImageSp: YoruSP,
+    charaName: "yoru",
+  },
 ];
 const initiatorArr = [
-  { iconUrl: sov, backgroundImage: Sova, charaName: "sova" },
-  { iconUrl: bre, backgroundImage: Breach, charaName: "breach" },
-  { iconUrl: sky, backgroundImage: Skye, charaName: "skye" },
-  { iconUrl: kay, backgroundImage: Kayo, charaName: "kayo" },
+  {
+    iconUrl: sov,
+    backgroundImage: Sova,
+    backgroundImageSp: SovaSP,
+    charaName: "sova",
+  },
+  {
+    iconUrl: bre,
+    backgroundImage: Breach,
+    backgroundImageSp: BreachSP,
+    charaName: "breach",
+  },
+  {
+    iconUrl: sky,
+    backgroundImage: Skye,
+    backgroundImageSp: SkyeSP,
+    charaName: "skye",
+  },
+  {
+    iconUrl: kay,
+    backgroundImage: Kayo,
+    backgroundImageSp: KayoSP,
+    charaName: "kayo",
+  },
 ];
 const controllerArr = [
-  { iconUrl: ome, backgroundImage: Omen, charaName: "omen" },
-  { iconUrl: bri, backgroundImage: Brimstone, charaName: "brimstone" },
-  { iconUrl: vip, backgroundImage: Viper, charaName: "viper" },
-  { iconUrl: ast, backgroundImage: Astra, charaName: "astra" },
+  {
+    iconUrl: ome,
+    backgroundImage: Omen,
+    backgroundImageSp: OmenSP,
+    charaName: "omen",
+  },
+  {
+    iconUrl: bri,
+    backgroundImage: Brimstone,
+    backgroundImageSp: BrimstoneSP,
+    charaName: "brimstone",
+  },
+  {
+    iconUrl: vip,
+    backgroundImage: Viper,
+    backgroundImageSp: ViperSP,
+    charaName: "viper",
+  },
+  {
+    iconUrl: ast,
+    backgroundImage: Astra,
+    backgroundImageSp: AstraSP,
+    charaName: "astra",
+  },
 ];
 const sentinelArr = [
-  { iconUrl: sag, backgroundImage: Sage, charaName: "sage" },
-  { iconUrl: cyp, backgroundImage: Cypher, charaName: "cypher" },
-  { iconUrl: kj, backgroundImage: KillJoy, charaName: "killjoy" },
-  { iconUrl: cha, backgroundImage: Chanber, charaName: "chanber" },
+  {
+    iconUrl: sag,
+    backgroundImage: Sage,
+    backgroundImageSp: SageSP,
+    charaName: "sage",
+  },
+  {
+    iconUrl: cyp,
+    backgroundImage: Cypher,
+    backgroundImageSp: CypherSP,
+    charaName: "cypher",
+  },
+  {
+    iconUrl: kj,
+    backgroundImage: KillJoy,
+    backgroundImageSp: KillJoySP,
+    charaName: "killjoy",
+  },
+  {
+    iconUrl: cha,
+    backgroundImage: Chanber,
+    backgroundImageSp: ChanberSP,
+    charaName: "chanber",
+  },
 ];
 
 function Agents(props) {
   const { imageChange, setImageChange } = props;
 
-  const [numberArr, setNumberArr] = React.useState([]);
+  const [bgiArr, setBgiArr] = React.useState([]);
+  const [bgiSpArr, setBgiSparr] = React.useState;
   return (
     <>
       <div className="agent-container">
-        <p className="agent-title">Agents</p>
+        <p className="agent-title title">-Agents-</p>
         <div className="agent-icon-container">
-          <div className="duelist icon">
-            <p className="type-name">Duelist</p>
-            {duelistArr.map((agent, index) => (
-              <Images
-                img={agent.iconUrl}
-                index={index}
-                imageChange={imageChange}
-                setImageChange={setImageChange}
-                backgroundImage={agent.backgroundImage}
-                setNumberArr={setNumberArr}
-                numberArr={numberArr}
-              />
-            ))}
+          <div className="agent-icon-container-inner">
+            <p className="type-name">
+              ≥ Duelist ≤
+              <hr />
+            </p>
+            <div className="duelist icon">
+              {duelistArr.map((agent, index) => (
+                <Images
+                  img={agent.iconUrl}
+                  index={index}
+                  imageChange={imageChange}
+                  setImageChange={setImageChange}
+                  backgroundImage={agent.backgroundImage}
+                  bgiArr={bgiArr}
+                  setBgiArr={setBgiArr}
+                  backgroundImageSp={agent.backgroundImageSp}
+                />
+              ))}
+            </div>
+          </div>
+          <div className="agent-icon-container-inner">
+            <p className="type-name">
+              ≥ Initiator ≤
+              <hr />
+            </p>
+            <div className="initiator icon">
+              {initiatorArr.map((agent, index) => (
+                <Images
+                  img={agent.iconUrl}
+                  index={index}
+                  imageChange={imageChange}
+                  setImageChange={setImageChange}
+                  backgroundImage={agent.backgroundImage}
+                  setNumberArr={setNumberArr}
+                  numberArr={numberArr}
+                  backgroundImageSp={backgroundImageSp}
+                />
+              ))}
+            </div>
           </div>
 
-          <div className="initiator icon">
-            <p className="type-name">Initiator</p>
-            {initiatorArr.map((agent, index) => (
-              <Images
-                img={agent.iconUrl}
-                index={index}
-                imageChange={imageChange}
-                setImageChange={setImageChange}
-                backgroundImage={agent.backgroundImage}
-                setNumberArr={setNumberArr}
-                numberArr={numberArr}
-              />
-            ))}
+          <div className="agent-icon-container-inner">
+            <p className="type-name">
+              ≥ Controller ≤
+              <hr />
+            </p>
+            <div className="controller icon">
+              {controllerArr.map((agent, index) => (
+                <Images
+                  img={agent.iconUrl}
+                  index={index}
+                  imageChange={imageChange}
+                  setImageChange={setImageChange}
+                  backgroundImage={agent.backgroundImage}
+                  setNumberArr={setNumberArr}
+                  numberArr={numberArr}
+                  backgroundImageSp={backgroundImageSp}
+                />
+              ))}
+            </div>
           </div>
 
-          <div className="controller icon">
-            <p className="type-name">Controller</p>
-            {controllerArr.map((agent, index) => (
-              <Images
-                img={agent.iconUrl}
-                index={index}
-                imageChange={imageChange}
-                setImageChange={setImageChange}
-                backgroundImage={agent.backgroundImage}
-                setNumberArr={setNumberArr}
-                numberArr={numberArr}
-              />
-            ))}
-          </div>
-
-          <div className="sentinel icon">
-            <p className="type-name">Sentinel</p>
-            {sentinelArr.map((agent, index) => (
-              <Images
-                img={agent.iconUrl}
-                index={index}
-                imageChange={imageChange}
-                setImageChange={setImageChange}
-                backgroundImage={agent.backgroundImage}
-                setNumberArr={setNumberArr}
-                numberArr={numberArr}
-              />
-            ))}
+          <div className="agent-icon-container-inner">
+            <p className="type-name">
+              ≥ Sentinel ≤
+              <hr />
+            </p>
+            <div className="sentinel icon">
+              {sentinelArr.map((agent, index) => (
+                <Images
+                  img={agent.iconUrl}
+                  index={index}
+                  imageChange={imageChange}
+                  setImageChange={setImageChange}
+                  backgroundImage={agent.backgroundImage}
+                  setNumberArr={setNumberArr}
+                  numberArr={numberArr}
+                  backgroundImageSp={backgroundImageSp}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import "../styles.css";
 import React from "react";
+import { Button, TextField } from "@mui/material/";
 
 function Comment() {
   const [text, setText] = React.useState("");
@@ -21,19 +22,38 @@ function Comment() {
   return (
     <>
       <div className="comment-container">
-        <p className="comment-title">COMMENT</p>
-        {display ? (
-          <textarea
-            placeholder="自由にコメントを書こう！"
-            value={text}
-            onChange={handleTextChange}
-          />
-        ) : (
-          <p className="new-id" onClick={handleEditClick}>
-            {newText}
-          </p>
-        )}
-        {display ? <button onClick={handleSubmitClick}>OK</button> : null}
+        <p className="comment-title title">-COMMENT-</p>
+        <div className="comment-field">
+          {display ? (
+            <TextField
+              placeholder="自由にコメントを書こう！"
+              value={text}
+              onChange={handleTextChange}
+              id="standard-outlined-flexible"
+              label="Comment"
+              multiline
+              maxRows={4}
+              variant="outlined"
+              error
+            />
+          ) : (
+            <p className="new-id" onClick={handleEditClick}>
+              {newText}
+            </p>
+          )}
+          {display ? (
+            <div className="comment-button">
+              <Button
+                onClick={handleSubmitClick}
+                variant="contained"
+                color="error"
+                size="large"
+              >
+                OK
+              </Button>
+            </div>
+          ) : null}
+        </div>
       </div>
     </>
   );

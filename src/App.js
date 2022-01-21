@@ -7,6 +7,7 @@ import Rank from "./components/Rank";
 import Agents from "./components/Agents";
 import TheBulletHit from "./components/TheBulletHit";
 import getAccountApi from "./components/getAccountApi";
+import html2canvas from "html2canvas";
 
 function App(props) {
   const [headShots, setHeadShots] = React.useState("");
@@ -15,15 +16,16 @@ function App(props) {
   const [id, setId] = React.useState("");
   const [display, setDisplay] = React.useState(true);
   const [tag, setTag] = React.useState("");
+  const [progress, setProgress] = React.useState(false);
 
   const handleSubmitClick = async () => {
     if (id === "" || tag === "") return;
 
     setDisplay((prev) => !prev);
-    console.log("開始");
+    setProgress(true);
     const response = await getAccountApi(id, tag);
-    console.log(response);
-    console.log("終了");
+    setProgress(false);
+
     const player = response.data.data.map((matchPlayer) => {
       return matchPlayer.players.all_players.find((myPlayer) => {
         return myPlayer.name === id;
@@ -85,35 +87,39 @@ function App(props) {
     backgroundImage: `url(${imageChange})`,
     backgroundSize: "cover",
     width: "100%",
+    backgroundPosition: "center",
   };
 
   return (
-    <div className="main-container" style={style}>
-      <div className="left-container">
-        {
-          <IdTag
-            handleSubmitClick={handleSubmitClick}
-            id={id}
-            setId={setId}
-            tag={tag}
-            setTag={setTag}
-            display={display}
-            setDisplay={setDisplay}
-          />
-        }
-        {<Rank />}
-        {
-          <TheBulletHit
-            headShots={headShots}
-            bodyShots={bodyShots}
-            legShots={legShots}
-            display={display}
-          />
-        }
-      </div>
-      <div className="right-container">
-        {<Agents imageChange={imageChange} setImageChange={setImageChange} />}
-        {<Comment />}
+    <div id="capture" className="main-container" style={style}>
+      <div className="main-container-inner">
+        <div className="left-container">
+          {
+            <IdTag
+              handleSubmitClick={handleSubmitClick}
+              id={id}
+              setId={setId}
+              tag={tag}
+              setTag={setTag}
+              display={display}
+              setDisplay={setDisplay}
+            />
+          }
+          {<Rank />}
+          {
+            <TheBulletHit
+              headShots={headShots}
+              bodyShots={bodyShots}
+              legShots={legShots}
+              display={display}
+              progress={progress}
+            />
+          }
+        </div>
+        <div className="right-container">
+          {<Agents imageChange={imageChange} setImageChange={setImageChange} />}
+          {<Comment />}
+        </div>
       </div>
     </div>
   );

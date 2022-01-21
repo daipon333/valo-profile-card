@@ -9,8 +9,9 @@ function Images(props) {
     imageChange,
     setImageChange,
     backgroundImage,
-    numberArr,
-    setNumberArr,
+    bgiArr,
+    setBgiArr,
+    backgroundImageSp,
   } = props;
   const [isGray, setIsGray] = React.useState(true);
 
@@ -19,36 +20,36 @@ function Images(props) {
   };
 
   React.useEffect(() => {
-    if (setNumberArr) {
+    if (setBgiArr) {
       if (!isGray) {
-        setNumberArr([...numberArr, backgroundImage]);
+        setBgiArr([...bgiArr, backgroundImage]);
       } else if (isGray) {
-        const idx = numberArr.indexOf(backgroundImage);
+        const idx = bgiArr.indexOf(backgroundImage);
         if (idx >= 0) {
-          const newNumberArr = [...numberArr];
-          newNumberArr.splice(idx, 1);
-          setNumberArr(newNumberArr);
+          const newBgiArr = [...bgiArr];
+          newBgiArr.splice(idx, 1);
+          setBgiArr(newBgiArr);
         }
       }
     }
   }, [isGray]);
 
   React.useEffect(() => {
-    if (numberArr)
-      if (numberArr[0]) {
-        const newNumberArr = [...numberArr];
-        setImageChange(newNumberArr[0]);
-      } else if (!numberArr[0]) {
+    if (bgiArr)
+      if (bgiArr[0]) {
+        const newBgiArr = [...bgiArr];
+        setImageChange(newBgiArr[0]);
+      } else if (!bgiArr[0]) {
         setImageChange(logo);
       }
-  }, [numberArr]);
+  }, [bgiArr]);
 
   return (
     <img
       src={img}
       onClick={handleGrayClick}
       key={index}
-      className={isGray ? "GrayScale" : ""}
+      className={isGray ? "GrayScale" : "border"}
     />
   );
 }

@@ -17,7 +17,7 @@ function Rank() {
   return (
     <>
       <div className="rank-container">
-        <p className="rank-title">RANK</p>
+        <p className="rank-title title">-RANK-</p>
         <div className="rank-icons-container">
           <div className="rank-icons">
             {rankIconArr.map((rankIcon, index) => (
