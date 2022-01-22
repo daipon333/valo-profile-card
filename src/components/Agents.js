@@ -50,7 +50,6 @@ import SovaSP from "../images/background-image-sp/BGI.Sova.jpg";
 import CypherSP from "../images/background-image-sp/BGI.Sypher.jpg";
 import ViperSP from "../images/background-image-sp/BGI.Viper.jpg";
 import YoruSP from "../images/background-image-sp/BGI.Yoru.jpg";
-import logoSP from "../images/background-image-sp/valorant3.jpeg";
 import SkyeSP from "../images/background-image-sp/BGI.Skye.jpg";
 import BrimstoneSP from "../images/background-image-sp/Brimstone.jpg";
 import KayoSP from "../images/background-image-sp/BGI.Kayo.jpg";
@@ -167,10 +166,11 @@ const sentinelArr = [
 ];
 
 function Agents(props) {
-  const { imageChange, setImageChange } = props;
+  const { imageChange, setImageChange, imageChangeSp, setImageChangeSp } =
+    props;
 
   const [bgiArr, setBgiArr] = React.useState([]);
-  const [bgiSpArr, setBgiSparr] = React.useState;
+  const [bgiSpArr, setBgiSpArr] = React.useState([]);
   return (
     <>
       <div className="agent-container">
@@ -188,9 +188,13 @@ function Agents(props) {
                   index={index}
                   imageChange={imageChange}
                   setImageChange={setImageChange}
+                  imageChangeSp={imageChangeSp}
+                  setImageChangeSp={setImageChangeSp}
                   backgroundImage={agent.backgroundImage}
                   bgiArr={bgiArr}
                   setBgiArr={setBgiArr}
+                  bgiSpArr={bgiSpArr}
+                  setBgiSpArr={setBgiSpArr}
                   backgroundImageSp={agent.backgroundImageSp}
                 />
               ))}
@@ -208,10 +212,14 @@ function Agents(props) {
                   index={index}
                   imageChange={imageChange}
                   setImageChange={setImageChange}
+                  imageChangeSp={imageChangeSp}
+                  setImageChangeSp={setImageChangeSp}
                   backgroundImage={agent.backgroundImage}
-                  setNumberArr={setNumberArr}
-                  numberArr={numberArr}
-                  backgroundImageSp={backgroundImageSp}
+                  bgiArr={bgiArr}
+                  setBgiArr={setBgiArr}
+                  bgiSpArr={bgiSpArr}
+                  setBgiSpArr={setBgiSpArr}
+                  backgroundImageSp={agent.backgroundImageSp}
                 />
               ))}
             </div>
@@ -229,10 +237,14 @@ function Agents(props) {
                   index={index}
                   imageChange={imageChange}
                   setImageChange={setImageChange}
+                  imageChangeSp={imageChangeSp}
+                  setImageChangeSp={setImageChangeSp}
                   backgroundImage={agent.backgroundImage}
-                  setNumberArr={setNumberArr}
-                  numberArr={numberArr}
-                  backgroundImageSp={backgroundImageSp}
+                  bgiArr={bgiArr}
+                  setBgiArr={setBgiArr}
+                  bgiSpArr={bgiSpArr}
+                  setBgiSpArr={setBgiSpArr}
+                  backgroundImageSp={agent.backgroundImageSp}
                 />
               ))}
             </div>
@@ -250,10 +262,14 @@ function Agents(props) {
                   index={index}
                   imageChange={imageChange}
                   setImageChange={setImageChange}
+                  imageChangeSp={imageChangeSp}
+                  setImageChangeSp={setImageChangeSp}
                   backgroundImage={agent.backgroundImage}
-                  setNumberArr={setNumberArr}
-                  numberArr={numberArr}
-                  backgroundImageSp={backgroundImageSp}
+                  bgiArr={bgiArr}
+                  setBgiArr={setBgiArr}
+                  bgiSpArr={bgiSpArr}
+                  setBgiSpArr={setBgiSpArr}
+                  backgroundImageSp={agent.backgroundImageSp}
                 />
               ))}
             </div>

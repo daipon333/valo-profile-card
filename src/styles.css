@@ -14,7 +14,7 @@
 /* IdTagのTextField */
 .css-1n4twyu-MuiInputBase-input-MuiOutlinedInput-input {
   color: azure !important;
-  margin-bottom: 15px;
+  border-color: azure !important;
 }
 
 .GrayScale {
@@ -42,7 +42,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 40px 0;
+  margin: 44px 0;
 }
 
 .left-container {
@@ -50,11 +50,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 40px 0;
+  margin: 44px 0;
 }
 
 .title-container {
-  height: 25vh;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -63,7 +63,8 @@ body {
 .app-name {
   color: rgb(255, 255, 255);
   font-size: 60px;
-  margin-bottom: 0%;
+  margin: 0;
+  padding: 65px 0 15px 0;
 }
 
 .id-container {
@@ -191,7 +192,7 @@ body {
 }
 
 .type-name {
-  font-size: 30px;
+  font-size: 25px;
   color: azure;
   margin: 0 0 0 10px;
 }
@@ -286,6 +287,7 @@ body {
 
   .app-name {
     font-size: 40px;
+    padding: 40px 0 15px 0;
   }
 
   .new-id {

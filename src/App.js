@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback, useEffect } from "react";
 import "./styles.css";
 import logo from "./images/background-image/valorant3.jpeg";
 import IdTag from "./components/IdTag";
@@ -8,6 +8,7 @@ import Agents from "./components/Agents";
 import TheBulletHit from "./components/TheBulletHit";
 import getAccountApi from "./components/getAccountApi";
 import html2canvas from "html2canvas";
+import useWindowResize from "./components/useWindowResize";
 
 function App(props) {
   const [headShots, setHeadShots] = React.useState("");
@@ -17,6 +18,9 @@ function App(props) {
   const [display, setDisplay] = React.useState(true);
   const [tag, setTag] = React.useState("");
   const [progress, setProgress] = React.useState(false);
+  const [imageChange, setImageChange] = React.useState(logo);
+  const [imageChangeSp, setImageChangeSp] = React.useState(logo);
+  const [screenWidth] = useWindowResize();
 
   const handleSubmitClick = async () => {
     if (id === "" || tag === "") return;
@@ -82,9 +86,26 @@ function App(props) {
     setBodyShots(Math.round(resultBody * 100) / 100);
     setLegShots(Math.round(resultLeg * 100) / 100);
   };
-  const [imageChange, setImageChange] = React.useState(logo);
+  // useEffect(() => {
+  //   if (window.innerWidth >= 768) {
+  //     setScreenWidth(true);
+  //   }
+  //   resizeEvent();
+  //   return () => window.removeEventListener("resize", resizeEvent);
+  // }, []);
+
+  // const resizeEvent = useCallback(() => {
+  //   window.addEventListener("resize", () => {
+  //     if (window.innerWidth < 768) {
+  //       setScreenWidth(false);
+  //     } else {
+  //       setScreenWidth(true);
+  //     }
+  //   });
+  // }, [screenWidth]);
+
   const style = {
-    backgroundImage: `url(${imageChange})`,
+    backgroundImage: `url(${screenWidth ? imageChange : imageChangeSp})`,
     backgroundSize: "cover",
     width: "100%",
     backgroundPosition: "center",
@@ -117,7 +138,14 @@ function App(props) {
           }
         </div>
         <div className="right-container">
-          {<Agents imageChange={imageChange} setImageChange={setImageChange} />}
+          {
+            <Agents
+              imageChange={imageChange}
+              setImageChange={setImageChange}
+              imageChangeSp={imageChangeSp}
+              setImageChangeSp={setImageChangeSp}
+            />
+          }
           {<Comment />}
         </div>
       </div>

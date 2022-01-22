@@ -25,8 +25,6 @@ function IdTag(props) {
     setTag(e.target.value);
   };
 
-  const classes = useStyles();
-
   return (
     <>
       <div className="title-container">
