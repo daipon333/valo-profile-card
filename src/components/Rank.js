@@ -21,7 +21,7 @@ function Rank() {
         <div className="rank-icons-container">
           <div className="rank-icons">
             {rankIconArr.map((rankIcon, index) => (
-              <Images img={rankIcon} index={index} />
+              <Images img={rankIcon} index={index} key={rankIcon} />
             ))}
           </div>
         </div>

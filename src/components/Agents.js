@@ -196,6 +196,7 @@ function Agents(props) {
                   bgiSpArr={bgiSpArr}
                   setBgiSpArr={setBgiSpArr}
                   backgroundImageSp={agent.backgroundImageSp}
+                  key={agent.iconUrl}
                 />
               ))}
             </div>
@@ -220,6 +221,7 @@ function Agents(props) {
                   bgiSpArr={bgiSpArr}
                   setBgiSpArr={setBgiSpArr}
                   backgroundImageSp={agent.backgroundImageSp}
+                  key={agent.iconUrl}
                 />
               ))}
             </div>
@@ -245,6 +247,7 @@ function Agents(props) {
                   bgiSpArr={bgiSpArr}
                   setBgiSpArr={setBgiSpArr}
                   backgroundImageSp={agent.backgroundImageSp}
+                  key={agent.iconUrl}
                 />
               ))}
             </div>
@@ -270,6 +273,7 @@ function Agents(props) {
                   bgiSpArr={bgiSpArr}
                   setBgiSpArr={setBgiSpArr}
                   backgroundImageSp={agent.backgroundImageSp}
+                  key={agent.iconUrl}
                 />
               ))}
             </div>
