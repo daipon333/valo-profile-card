@@ -20,7 +20,6 @@ import pratGray from "../images/rank_icon_gray/prati_icon.png";
 import radiGray from "../images/rank_icon_gray/radi_icon.png";
 import silGray from "../images/rank_icon_gray/silver_icon.png";
 import unGray from "../images/rank_icon_gray/unranked_icon2.png";
-import { getBottomNavigationActionUtilityClass } from "@mui/material";
 
 const rankIconArr = [
   { rankIcon: un, rankIconGray: unGray },
@@ -29,7 +28,7 @@ const rankIconArr = [
   { rankIcon: sil, rankIconGray: silGray },
   { rankIcon: gold, rankIconGray: goldGray },
   { rankIcon: prat, rankIconGray: pratGray },
-  { rankIcon: dia, rankIconGray: imoGray },
+  { rankIcon: dia, rankIconGray: diaGray },
   { rankIcon: imo, rankIconGray: imoGray },
   { rankIcon: radi, rankIconGray: radiGray },
 ];

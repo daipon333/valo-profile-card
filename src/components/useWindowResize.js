@@ -1,11 +1,11 @@
 import React, { useCallback, useEffect, useState } from "react";
 
 const useWindowResize = () => {
-  const [screenWidth, setScreenWidrh] = useState(false);
+  const [screenWidth, setScreenWidth] = useState(false);
 
   useEffect(() => {
     if (window.innerWidth >= 768) {
-      setScreenWidrh(true);
+      setScreenWidth(true);
     }
     resizeEvent();
     return () => window.removeEventListener("resize", resizeEvent);
@@ -14,13 +14,13 @@ const useWindowResize = () => {
   const resizeEvent = useCallback(() => {
     window.addEventListener("resize", () => {
       if (window.innerWidth < 768) {
-        setScreenWidrh(false);
+        setScreenWidth(false);
       } else {
-        setScreenWidrh(true);
+        setScreenWidth(true);
       }
     });
   }, [screenWidth]);
-  return [screenWidth, setScreenWidrh];
+  return [screenWidth, setScreenWidth];
 };
 
 export default useWindowResize;

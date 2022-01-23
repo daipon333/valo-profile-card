@@ -8,9 +8,7 @@ function Images(props) {
     img,
     imgGray,
     index,
-    imageChange,
     setImageChange,
-    imageChangeSp,
     setImageChangeSp,
     backgroundImage,
     bgiArr,
@@ -18,11 +16,15 @@ function Images(props) {
     setBgiSpArr,
     bgiSpArr,
     backgroundImageSp,
+    setDeleteButton,
+    setSaveStanby,
   } = props;
   const [isGray, setIsGray] = React.useState(true);
 
   const handleGrayClick = () => {
     setIsGray(!isGray);
+    setDeleteButton(false);
+    setSaveStanby(false);
   };
 
   React.useEffect(() => {
@@ -63,31 +65,6 @@ function Images(props) {
         setImageChange(logo);
       }
   }, [bgiSpArr, bgiArr]);
-
-  // React.useEffect(() => {
-  //   if (setBgiArr) {
-  //     if (!isGray) {
-  //       setBgiArr([...bgiArr, backgroundImage]);
-  //     } else if (isGray) {
-  //       const idx = bgiArr.indexOf(backgroundImage);
-  //       if (idx >= 0) {
-  //         const newBgiArr = [...bgiArr];
-  //         newBgiArr.splice(idx, 1);
-  //         setBgiArr(newBgiArr);
-  //       }
-  //     }
-  //   }
-  // }, [isGray]);
-
-  // React.useEffect(() => {
-  //   if (bgiArr)
-  //     if (bgiArr[0]) {
-  //       const newBgiArr = [...bgiArr];
-  //       setImageChange(newBgiArr[0]);
-  //     } else if (!bgiArr[0]) {
-  //       setImageChange(logo);
-  //     }
-  // }, [bgiArr]);
 
   return (
     <img

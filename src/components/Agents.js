@@ -202,8 +202,16 @@ const sentinelArr = [
 ];
 
 function Agents(props) {
-  const { imageChange, setImageChange, imageChangeSp, setImageChangeSp } =
-    props;
+  const {
+    imageChange,
+    setImageChange,
+    imageChangeSp,
+    setImageChangeSp,
+    deleteButton,
+    setDeleteButton,
+    saveStandby,
+    setSaveStanby,
+  } = props;
 
   const [bgiArr, setBgiArr] = React.useState([]);
   const [bgiSpArr, setBgiSpArr] = React.useState([]);
@@ -234,6 +242,10 @@ function Agents(props) {
                   setBgiSpArr={setBgiSpArr}
                   backgroundImageSp={agent.backgroundImageSp}
                   key={agent.iconUrl}
+                  setDeleteButton={setDeleteButton}
+                  deleteButton={deleteButton}
+                  saveStandby={saveStandby}
+                  setSaveStanby={setSaveStanby}
                 />
               ))}
             </div>
@@ -260,6 +272,10 @@ function Agents(props) {
                   setBgiSpArr={setBgiSpArr}
                   backgroundImageSp={agent.backgroundImageSp}
                   key={agent.iconUrl}
+                  setDeleteButton={setDeleteButton}
+                  deleteButton={deleteButton}
+                  saveStandby={saveStandby}
+                  setSaveStanby={setSaveStanby}
                 />
               ))}
             </div>
@@ -287,6 +303,10 @@ function Agents(props) {
                   setBgiSpArr={setBgiSpArr}
                   backgroundImageSp={agent.backgroundImageSp}
                   key={agent.iconUrl}
+                  setDeleteButton={setDeleteButton}
+                  deleteButton={deleteButton}
+                  saveStandby={saveStandby}
+                  setSaveStanby={setSaveStanby}
                 />
               ))}
             </div>
@@ -314,6 +334,10 @@ function Agents(props) {
                   setBgiSpArr={setBgiSpArr}
                   backgroundImageSp={agent.backgroundImageSp}
                   key={agent.iconUrl}
+                  setDeleteButton={setDeleteButton}
+                  deleteButton={deleteButton}
+                  saveStandby={saveStandby}
+                  setSaveStanby={setSaveStanby}
                 />
               ))}
             </div>

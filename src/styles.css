@@ -252,13 +252,10 @@ body {
   color: azure;
 }
 
-.save-btn-wrapper {
-  display: flex;
-  width: 100px;
-  height: 30px;
-  flex-direction: column;
-  position: absolute;
+.save-btn-container {
   right: 2vw;
+  display: flex;
+  position: absolute;
   bottom: 0.5vh;
 }
 
@@ -359,8 +356,28 @@ body {
     margin: 40px;
   }
 
-  .save-btn-wrapper {
+  .save-btn-container {
     display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: space-evenly;
+    width: 95vw;
+    margin: 15px 0 40px 0;
+    right: unset;
+    bottom: unset;
+  }
+
+  .save-btn {
+    display: flex;
+    height: 30px;
+    position: relative;
+    justify-content: space-evenly;
+    width: 95vw;
+  }
+
+  .preview-btn {
+    display: flex;
+    height: 30px;
     position: relative;
     justify-content: space-evenly;
     width: 95vw;

@@ -21,6 +21,8 @@ function App(props) {
   const [imageChange, setImageChange] = React.useState(logo);
   const [imageChangeSp, setImageChangeSp] = React.useState(logo);
   const [screenWidth] = useWindowResize();
+  const [deleteButton, setDeleteButton] = React.useState(false);
+  const [saveStandby, setSaveStanby] = React.useState(false);
 
   const handleSubmitClick = async () => {
     if (id === "" || tag === "") return;
@@ -127,11 +129,26 @@ function App(props) {
               setImageChange={setImageChange}
               imageChangeSp={imageChangeSp}
               setImageChangeSp={setImageChangeSp}
+              deleteButton={deleteButton}
+              setDeleteButton={setDeleteButton}
+              saveStandby={saveStandby}
+              setSaveStanby={setSaveStanby}
             />
           }
           {<Comment />}
         </div>
-        <SaveButton display={display} />
+
+        <SaveButton
+          display={display}
+          setDisplay={setDisplay}
+          setImageChangeSp={setImageChangeSp}
+          imageChange={imageChange}
+          imageChangeSp={imageChangeSp}
+          setDeleteButton={setDeleteButton}
+          deleteButton={deleteButton}
+          saveStandby={saveStandby}
+          setSaveStanby={setSaveStanby}
+        />
       </div>
     </div>
   );
