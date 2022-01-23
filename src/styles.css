@@ -7,6 +7,12 @@
   box-sizing: border-box;
 }
 
+.border {
+  border: solid 2px rgb(240, 255, 255);
+  border-radius: 10px;
+  padding: 4px;
+}
+
 .id-input::placeholder {
   text-align: center;
 }
@@ -70,7 +76,7 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
 
   height: auto;
-  outline: 2px solid azure;
+  border: 2px solid rgb(240, 255, 255, 0.7);
 }
 
 .new-id-container {
@@ -110,7 +116,7 @@ body {
   background-color: rgb(0, 0, 0, 0.5);
 
   height: auto;
-  outline: 2px solid azure;
+  border: 2px solid rgb(240, 255, 255, 0.7);
 }
 
 .rank-title {
@@ -124,12 +130,6 @@ body {
   align-items: center;
   justify-content: space-evenly;
   margin: 15px;
-}
-
-.border {
-  border: solid 2px white;
-  border-radius: 10px;
-  padding: 4px;
 }
 
 .rank-icons img {
@@ -146,7 +146,7 @@ body {
   background-color: rgb(0, 0, 0, 0.5);
 
   height: auto;
-  outline: 2px solid azure;
+  border: 2px solid rgb(240, 255, 255, 0.7);
 }
 
 .thebullethit-title {
@@ -170,7 +170,7 @@ body {
 
 .agent-container {
   background-color: rgb(0, 0, 0, 0.5);
-  outline: 2px solid azure;
+  border: 2px solid rgb(240, 255, 255, 0.7);
   height: auto;
   display: flex;
   flex-direction: column;
@@ -221,7 +221,7 @@ body {
   background-color: rgb(0, 0, 0, 0.5);
 
   height: auto;
-  outline: 2px solid azure;
+  border: 2px solid rgb(240, 255, 255, 0.7);
 }
 
 .comment-title {
@@ -359,25 +359,6 @@ body {
   .save-btn-container {
     display: flex;
     flex-direction: column;
-    position: relative;
-    justify-content: space-evenly;
-    width: 95vw;
-    margin: 15px 0 40px 0;
-    right: unset;
-    bottom: unset;
-  }
-
-  .save-btn {
-    display: flex;
-    height: 30px;
-    position: relative;
-    justify-content: space-evenly;
-    width: 95vw;
-  }
-
-  .preview-btn {
-    display: flex;
-    height: 30px;
     position: relative;
     justify-content: space-evenly;
     width: 95vw;

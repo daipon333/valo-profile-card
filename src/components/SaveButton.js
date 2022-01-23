@@ -19,12 +19,8 @@ function SaveButton(props) {
 
   function saveImageChange() {
     setImageChangeSp(imageChange);
-    setSaveStanby(true);
-    setDeleteButton(true);
-  }
-
-  function returnImageChange() {
-    setImageChangeSp(imageChangeSp);
+    setDeleteButton(!deleteButton ? true : false);
+    setSaveStanby(!saveStandby ? true : false);
   }
 
   function captureImageClick() {
@@ -37,53 +33,39 @@ function SaveButton(props) {
       link.download = `MyProfile.png`;
       link.click();
     });
+
+    setDeleteButton(!screenWidth ? false : false);
     setSaveStanby(false);
-    setDeleteButton(false);
   }
 
   return (
-    <div className="save-btn-container">
+    <div className="save-btn-container" data-html2canvas-ignore="true">
       {!screenWidth ? (
         !display ? (
           !deleteButton ? (
-            <div className="preview-btn" data-html2canvas-ignore="true">
-              <Button
-                variant="contained"
-                size="small"
-                color="success"
-                onClick={saveImageChange}
-              >
-                保存ボタンを表示
-              </Button>
-            </div>
+            <Button
+              variant="contained"
+              size="small"
+              color="success"
+              onClick={saveImageChange}
+            >
+              保存ボタンを表示
+            </Button>
           ) : null
         ) : null
       ) : null}
-      <div className="save-btn" data-html2canvas-ignore="true">
-        {!display ? (
-          saveStandby ? (
-            screenWidth ? (
-              <Button
-                variant="contained"
-                size="small"
-                color="success"
-                onClick={captureImageClick}
-              >
-                保存
-              </Button>
-            ) : (
-              <Button
-                variant="contained"
-                size="small"
-                color="success"
-                onClick={captureImageClick}
-              >
-                保存
-              </Button>
-            )
-          ) : null
-        ) : null}
-      </div>
+      {!display ? (
+        saveStandby ? (
+          <Button
+            variant="contained"
+            size="small"
+            color="success"
+            onClick={captureImageClick}
+          >
+            保存
+          </Button>
+        ) : null
+      ) : null}
     </div>
   );
 }

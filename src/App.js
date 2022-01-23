@@ -27,6 +27,8 @@ function App(props) {
   const handleSubmitClick = async () => {
     if (id === "" || tag === "") return;
 
+    setSaveStanby(!saveStandby ? (screenWidth ? true : false) : false);
+
     setDisplay((prev) => !prev);
     setProgress(true);
     const response = await getAccountApi(id, tag);
@@ -88,6 +90,7 @@ function App(props) {
     setBodyShots(Math.round(resultBody * 100) / 100);
     setLegShots(Math.round(resultLeg * 100) / 100);
   };
+  console.log(saveStandby);
 
   const style = {
     backgroundImage: `url(${screenWidth ? imageChange : imageChangeSp})`,

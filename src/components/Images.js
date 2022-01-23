@@ -2,6 +2,7 @@ import "../styles.css";
 import React from "react";
 import logo from "../images/background-image/valorant3.jpeg";
 import { useMediaQuery } from "react-responsive";
+import useWindowResize from "./useWindowResize";
 
 function Images(props) {
   const {
@@ -17,14 +18,17 @@ function Images(props) {
     bgiSpArr,
     backgroundImageSp,
     setDeleteButton,
+    deleteButton,
     setSaveStanby,
+    saveStanby,
   } = props;
   const [isGray, setIsGray] = React.useState(true);
+  const [screenWidth] = useWindowResize();
 
   const handleGrayClick = () => {
     setIsGray(!isGray);
-    setDeleteButton(false);
-    setSaveStanby(false);
+    setSaveStanby(!saveStanby ? (screenWidth ? true : false) : false);
+    setDeleteButton(deleteButton ? false : false);
   };
 
   React.useEffect(() => {
@@ -70,7 +74,6 @@ function Images(props) {
     <img
       src={isGray ? imgGray : img}
       onClick={handleGrayClick}
-      key={index}
       className={isGray ? "" : "border"}
     />
   );
