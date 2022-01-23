@@ -33,11 +33,12 @@ function Comment() {
               label="Comment"
               multiline
               maxRows={4}
-              variant="outlined"
+              variant="standard"
               error
+              fullWidth
             />
           ) : (
-            <p className="new-id" onClick={handleEditClick}>
+            <p className="new-id new-text" onClick={handleEditClick}>
               {newText}
             </p>
           )}

@@ -7,8 +7,8 @@ import Rank from "./components/Rank";
 import Agents from "./components/Agents";
 import TheBulletHit from "./components/TheBulletHit";
 import getAccountApi from "./components/getAccountApi";
-import html2canvas from "html2canvas";
 import useWindowResize from "./components/useWindowResize";
+import SaveButton from "./components/SaveButton";
 
 function App(props) {
   const [headShots, setHeadShots] = React.useState("");
@@ -86,23 +86,6 @@ function App(props) {
     setBodyShots(Math.round(resultBody * 100) / 100);
     setLegShots(Math.round(resultLeg * 100) / 100);
   };
-  // useEffect(() => {
-  //   if (window.innerWidth >= 768) {
-  //     setScreenWidth(true);
-  //   }
-  //   resizeEvent();
-  //   return () => window.removeEventListener("resize", resizeEvent);
-  // }, []);
-
-  // const resizeEvent = useCallback(() => {
-  //   window.addEventListener("resize", () => {
-  //     if (window.innerWidth < 768) {
-  //       setScreenWidth(false);
-  //     } else {
-  //       setScreenWidth(true);
-  //     }
-  //   });
-  // }, [screenWidth]);
 
   const style = {
     backgroundImage: `url(${screenWidth ? imageChange : imageChangeSp})`,
@@ -148,6 +131,7 @@ function App(props) {
           }
           {<Comment />}
         </div>
+        <SaveButton display={display} />
       </div>
     </div>
   );

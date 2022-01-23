@@ -11,7 +11,28 @@ import bro from "../images/rank_icon/bronze_icon.png";
 import imo from "../images/rank_icon/imortal_icon.png";
 import un from "../images/rank_icon/unranked_icon.png";
 
-const rankIconArr = [un, iron, bro, sil, gold, prat, dia, imo, radi];
+import broGray from "../images/rank_icon_gray/bronze_icon3.png";
+import diaGray from "../images/rank_icon_gray/dia_icon.png";
+import goldGray from "../images/rank_icon_gray/gold_icon.png";
+import imoGray from "../images/rank_icon_gray/imortal_icon.png";
+import ironGray from "../images/rank_icon_gray/iron_icon.png";
+import pratGray from "../images/rank_icon_gray/prati_icon.png";
+import radiGray from "../images/rank_icon_gray/radi_icon.png";
+import silGray from "../images/rank_icon_gray/silver_icon.png";
+import unGray from "../images/rank_icon_gray/unranked_icon2.png";
+import { getBottomNavigationActionUtilityClass } from "@mui/material";
+
+const rankIconArr = [
+  { rankIcon: un, rankIconGray: unGray },
+  { rankIcon: iron, rankIconGray: ironGray },
+  { rankIcon: bro, rankIconGray: broGray },
+  { rankIcon: sil, rankIconGray: silGray },
+  { rankIcon: gold, rankIconGray: goldGray },
+  { rankIcon: prat, rankIconGray: pratGray },
+  { rankIcon: dia, rankIconGray: imoGray },
+  { rankIcon: imo, rankIconGray: imoGray },
+  { rankIcon: radi, rankIconGray: radiGray },
+];
 
 function Rank() {
   return (
@@ -20,8 +41,13 @@ function Rank() {
         <p className="rank-title title">-RANK-</p>
         <div className="rank-icons-container">
           <div className="rank-icons">
-            {rankIconArr.map((rankIcon, index) => (
-              <Images img={rankIcon} index={index} key={rankIcon} />
+            {rankIconArr.map((icon, index) => (
+              <Images
+                img={icon.rankIcon}
+                imgGray={icon.rankIconGray}
+                index={index}
+                key={icon.rankIcon}
+              />
             ))}
           </div>
         </div>

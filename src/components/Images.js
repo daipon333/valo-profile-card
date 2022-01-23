@@ -6,6 +6,7 @@ import { useMediaQuery } from "react-responsive";
 function Images(props) {
   const {
     img,
+    imgGray,
     index,
     imageChange,
     setImageChange,
@@ -90,10 +91,10 @@ function Images(props) {
 
   return (
     <img
-      src={img}
+      src={isGray ? imgGray : img}
       onClick={handleGrayClick}
       key={index}
-      className={isGray ? "GrayScale" : "border"}
+      className={isGray ? "" : "border"}
     />
   );
 }

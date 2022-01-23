@@ -12,9 +12,8 @@
 }
 
 /* IdTagのTextField */
-.css-1n4twyu-MuiInputBase-input-MuiOutlinedInput-input {
+.css-c5v1qu-MuiInputBase-input-MuiFilledInput-input {
   color: azure !important;
-  border-color: azure !important;
 }
 
 .GrayScale {
@@ -165,7 +164,7 @@ body {
 
 .hit-per {
   color: azure;
-  font-size: 30px;
+  font-size: 25px;
   margin: 10px;
 }
 
@@ -238,16 +237,29 @@ body {
   margin: 10px 0 15px 30px;
 }
 
-.css-1sqnrkk-MuiInputBase-input-MuiOutlinedInput-input {
-  height: 6vh !important;
-  width: 40vh !important;
-  margin: 20px 0px 20px 20px !important;
+/* Commentのテキストエリア */
+.css-66dh3a-MuiInputBase-input-MuiInput-input {
   color: azure !important;
+  white-space: pre-wrap !important;
+}
+/* Commentのボタン */
+.css-1i749hr-MuiButtonBase-root-MuiButton-root {
+  margin-right: 20px !important;
 }
 
 .new-text {
-  font-size: 15px;
+  font-size: 25px;
   color: azure;
+}
+
+.save-btn-wrapper {
+  display: flex;
+  width: 100px;
+  height: 30px;
+  flex-direction: column;
+  position: absolute;
+  right: 2vw;
+  bottom: 0.5vh;
 }
 
 @media (max-width: 768px) {
@@ -345,5 +357,15 @@ body {
     display: flex;
     justify-content: center;
     margin: 40px;
+  }
+
+  .save-btn-wrapper {
+    display: flex;
+    position: relative;
+    justify-content: space-evenly;
+    width: 95vw;
+    margin: 15px 0 40px 0;
+    right: unset;
+    bottom: unset;
   }
 }

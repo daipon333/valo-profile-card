@@ -1,15 +1,6 @@
 import "../styles.css";
 import React from "react";
 import { Button, TextField } from "@mui/material/";
-import { makeStyles } from "@material-ui/styles";
-import { color } from "@mui/system";
-
-const useStyles = makeStyles({
-  TextField: {
-    textAlign: "center",
-    color: "white",
-  },
-});
 
 function IdTag(props) {
   const { handleSubmitClick, id, setId, display, setDisplay, tag, setTag } =
@@ -47,16 +38,18 @@ function IdTag(props) {
                 label="ID"
                 error
                 size="small"
+                variant="filled"
               />
 
               <TextField
-                placeholder="例:12345"
+                placeholder="例:9999"
                 value={tag}
                 onChange={handleTagChange}
                 id="outlined-tag"
                 label="#TAG"
                 error
                 size="small"
+                variant="filled"
               />
             </div>
           ) : (
@@ -75,6 +68,7 @@ function IdTag(props) {
               variant="contained"
               color="error"
               size="large"
+              disabled={id && tag ? false : true}
             >
               OK
             </Button>

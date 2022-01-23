@@ -18,6 +18,25 @@ import sky from "../images/chara_icon/Skye_icon.png";
 import sov from "../images/chara_icon/Sova_icon.png";
 import vip from "../images/chara_icon/Viper_icon.png";
 import yor from "../images/chara_icon/Yoru_icon.png";
+
+import astGray from "../images/chara_icon_gray/Astra_icon.png";
+import breGray from "../images/chara_icon_gray/Breach_icon.png";
+import briGray from "../images/chara_icon_gray/Brimstone_icon.png";
+import chaGray from "../images/chara_icon_gray/Chamber_icon-150x150 (1).png";
+import cypGray from "../images/chara_icon_gray/Cypher_icon (1).png";
+import jetGray from "../images/chara_icon_gray/Jett_icon-1 (1).png";
+import kayGray from "../images/chara_icon_gray/KAYO_icon.png";
+import kjGray from "../images/chara_icon_gray/Killjoy_icon.png";
+import omeGray from "../images/chara_icon_gray/Omen_icon (1).png";
+import phoGray from "../images/chara_icon_gray/Phoenix_icon.png";
+import razGray from "../images/chara_icon_gray/Raze_icon.png";
+import reyGray from "../images/chara_icon_gray/Reyna_icon.png";
+import sagGray from "../images/chara_icon_gray/Sage_icon.png";
+import skyGray from "../images/chara_icon_gray/Skye_icon.png";
+import sovGray from "../images/chara_icon_gray/Sova_icon (1).png";
+import vipGray from "../images/chara_icon_gray/Viper_icon.png";
+import yorGray from "../images/chara_icon_gray/Yoru_icon.png";
+
 import Astra from "../images/background-image/BGI.Astra.jpg";
 import Breach from "../images/background-image/BGI.Breach.jpg";
 import Chanber from "../images/background-image/BGI.Chanber.png";
@@ -57,30 +76,35 @@ import KayoSP from "../images/background-image-sp/BGI.Kayo.jpg";
 const duelistArr = [
   {
     iconUrl: jet,
+    iconUrlGray: jetGray,
     backgroundImage: Jett,
     backgroundImageSp: JettSP,
     charaName: "jett",
   },
   {
     iconUrl: pho,
+    iconUrlGray: phoGray,
     backgroundImage: Phoenix,
     backgroundImageSp: PhoenixSP,
     charaName: "phoenix",
   },
   {
     iconUrl: raz,
+    iconUrlGray: razGray,
     backgroundImage: Raze,
     backgroundImageSp: RazeSP,
     charaName: "raze",
   },
   {
     iconUrl: rey,
+    iconUrlGray: reyGray,
     backgroundImage: Reyna,
     backgroundImageSp: ReynaSP,
     charaName: "reyna",
   },
   {
     iconUrl: yor,
+    iconUrlGray: yorGray,
     backgroundImage: Yoru,
     backgroundImageSp: YoruSP,
     charaName: "yoru",
@@ -89,24 +113,28 @@ const duelistArr = [
 const initiatorArr = [
   {
     iconUrl: sov,
+    iconUrlGray: sovGray,
     backgroundImage: Sova,
     backgroundImageSp: SovaSP,
     charaName: "sova",
   },
   {
     iconUrl: bre,
+    iconUrlGray: breGray,
     backgroundImage: Breach,
     backgroundImageSp: BreachSP,
     charaName: "breach",
   },
   {
     iconUrl: sky,
+    iconUrlGray: skyGray,
     backgroundImage: Skye,
     backgroundImageSp: SkyeSP,
     charaName: "skye",
   },
   {
     iconUrl: kay,
+    iconUrlGray: kayGray,
     backgroundImage: Kayo,
     backgroundImageSp: KayoSP,
     charaName: "kayo",
@@ -115,24 +143,28 @@ const initiatorArr = [
 const controllerArr = [
   {
     iconUrl: ome,
+    iconUrlGray: omeGray,
     backgroundImage: Omen,
     backgroundImageSp: OmenSP,
     charaName: "omen",
   },
   {
     iconUrl: bri,
+    iconUrlGray: briGray,
     backgroundImage: Brimstone,
     backgroundImageSp: BrimstoneSP,
     charaName: "brimstone",
   },
   {
     iconUrl: vip,
+    iconUrlGray: vipGray,
     backgroundImage: Viper,
     backgroundImageSp: ViperSP,
     charaName: "viper",
   },
   {
     iconUrl: ast,
+    iconUrlGray: astGray,
     backgroundImage: Astra,
     backgroundImageSp: AstraSP,
     charaName: "astra",
@@ -141,24 +173,28 @@ const controllerArr = [
 const sentinelArr = [
   {
     iconUrl: sag,
+    iconUrlGray: sagGray,
     backgroundImage: Sage,
     backgroundImageSp: SageSP,
     charaName: "sage",
   },
   {
     iconUrl: cyp,
+    iconUrlGray: cypGray,
     backgroundImage: Cypher,
     backgroundImageSp: CypherSP,
     charaName: "cypher",
   },
   {
     iconUrl: kj,
+    iconUrlGray: kjGray,
     backgroundImage: KillJoy,
     backgroundImageSp: KillJoySP,
     charaName: "killjoy",
   },
   {
     iconUrl: cha,
+    iconUrlGray: chaGray,
     backgroundImage: Chanber,
     backgroundImageSp: ChanberSP,
     charaName: "chanber",
@@ -185,6 +221,7 @@ function Agents(props) {
               {duelistArr.map((agent, index) => (
                 <Images
                   img={agent.iconUrl}
+                  imgGray={agent.iconUrlGray}
                   index={index}
                   imageChange={imageChange}
                   setImageChange={setImageChange}
@@ -210,6 +247,7 @@ function Agents(props) {
               {initiatorArr.map((agent, index) => (
                 <Images
                   img={agent.iconUrl}
+                  imgGray={agent.iconUrlGray}
                   index={index}
                   imageChange={imageChange}
                   setImageChange={setImageChange}
@@ -236,6 +274,7 @@ function Agents(props) {
               {controllerArr.map((agent, index) => (
                 <Images
                   img={agent.iconUrl}
+                  imgGray={agent.iconUrlGray}
                   index={index}
                   imageChange={imageChange}
                   setImageChange={setImageChange}
@@ -262,6 +301,7 @@ function Agents(props) {
               {sentinelArr.map((agent, index) => (
                 <Images
                   img={agent.iconUrl}
+                  imgGray={agent.iconUrlGray}
                   index={index}
                   imageChange={imageChange}
                   setImageChange={setImageChange}
