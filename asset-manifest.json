@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/valo-profile-card/static/css/main.36108699.css",
-    "main.js": "/valo-profile-card/static/js/main.2c24df17.js",
+    "main.css": "/valo-profile-card/static/css/main.359959b1.css",
+    "main.js": "/valo-profile-card/static/js/main.895ca540.js",
     "static/media/BGI.Chanber.png": "/valo-profile-card/static/media/BGI.Chanber.db5e66a3aaad68a62cbc.png",
     "static/media/BGI.Yoru.jpg": "/valo-profile-card/static/media/BGI.Yoru.ea2599113f507a34e6de.jpg",
     "static/media/BGI.Phoenix.jpg": "/valo-profile-card/static/media/BGI.Phoenix.72eb1b9d7f58a719409f.jpg",
@@ -55,11 +55,11 @@
     "static/media/Valorant Font.ttf": "/valo-profile-card/static/media/Valorant Font.c940c94885b4b335888b.ttf",
     "static/media/Chamber_icon-150x150 (1).png": "/valo-profile-card/static/media/Chamber_icon-150x150 (1).b6fea07a668d75c56c5d.png",
     "index.html": "/valo-profile-card/index.html",
-    "main.36108699.css.map": "/valo-profile-card/static/css/main.36108699.css.map",
-    "main.2c24df17.js.map": "/valo-profile-card/static/js/main.2c24df17.js.map"
+    "main.359959b1.css.map": "/valo-profile-card/static/css/main.359959b1.css.map",
+    "main.895ca540.js.map": "/valo-profile-card/static/js/main.895ca540.js.map"
   },
   "entrypoints": [
-    "static/css/main.36108699.css",
-    "static/js/main.2c24df17.js"
+    "static/css/main.359959b1.css",
+    "static/js/main.895ca540.js"
   ]
 }
