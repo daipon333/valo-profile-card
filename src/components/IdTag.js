@@ -1,10 +1,24 @@
 import "../styles.css";
 import React from "react";
 import { Button, TextField } from "@mui/material/";
+import { makeStyles } from "@mui/styles/";
+
+const useStyles = makeStyles(() => ({
+  text: {
+    color: "red",
+    textAlign: "center",
+    marginLeft: "5px",
+  },
+}));
 
 function IdTag(props) {
   const { handleSubmitClick, id, setId, display, setDisplay, tag, setTag } =
     props;
+  const inputProps = {
+    color: "white",
+  };
+  const classes = useStyles();
+
   const handleEditClick = () => {
     setDisplay((prev) => !prev);
   };
@@ -31,25 +45,39 @@ function IdTag(props) {
           {display ? (
             <div className="TextField">
               <TextField
+                sx={{
+                  input: {
+                    color: "azure",
+                    textAlign: "center",
+                    fontSize: "15px",
+                  },
+                }}
                 placeholder="例:VALO太郎"
                 value={id}
                 onChange={handleIdChange}
                 id="outlined-id"
                 label="ID"
-                error
                 size="small"
                 variant="filled"
+                error
               />
 
               <TextField
+                sx={{
+                  input: {
+                    color: "azure",
+                    textAlign: "center",
+                    fontSize: "15px",
+                  },
+                }}
                 placeholder="例:9999"
                 value={tag}
                 onChange={handleTagChange}
                 id="outlined-tag"
                 label="#TAG"
-                error
                 size="small"
                 variant="filled"
+                error
               />
             </div>
           ) : (

@@ -13,15 +13,6 @@
   padding: 4px;
 }
 
-.id-input::placeholder {
-  text-align: center;
-}
-
-/* IdTagのTextField */
-.css-c5v1qu-MuiInputBase-input-MuiFilledInput-input {
-  color: azure !important;
-}
-
 .GrayScale {
   filter: grayscale(1);
   margin: 0;
@@ -237,11 +228,6 @@ body {
   margin: 10px 0 15px 30px;
 }
 
-/* Commentのテキストエリア */
-.css-66dh3a-MuiInputBase-input-MuiInput-input {
-  color: azure !important;
-  white-space: pre-wrap !important;
-}
 /* Commentのボタン */
 .css-1i749hr-MuiButtonBase-root-MuiButton-root {
   margin-right: 20px !important;

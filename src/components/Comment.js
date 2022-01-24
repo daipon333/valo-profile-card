@@ -1,6 +1,7 @@
 import "../styles.css";
 import React from "react";
 import { Button, TextField } from "@mui/material/";
+import { makeStyles, withStyles, styled } from "@mui/styles/";
 
 function Comment() {
   const [text, setText] = React.useState("");
@@ -26,6 +27,13 @@ function Comment() {
         <div className="comment-field">
           {display ? (
             <TextField
+              inputProps={{
+                style: {
+                  color: "white",
+                  textAlign: "center",
+                  fontSize: "15px",
+                },
+              }}
               placeholder="自由にコメントを書こう！"
               value={text}
               onChange={handleTextChange}
@@ -33,8 +41,8 @@ function Comment() {
               label="Comment"
               multiline
               maxRows={4}
-              variant="standard"
               error
+              variant="standard"
               fullWidth
             />
           ) : (
