@@ -1,7 +1,6 @@
 import "../styles.css";
 import React from "react";
 import { Button, TextField } from "@mui/material/";
-import { makeStyles, withStyles, styled } from "@mui/styles/";
 
 function Comment() {
   const [text, setText] = React.useState("");

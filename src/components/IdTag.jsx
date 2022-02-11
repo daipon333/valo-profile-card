@@ -1,23 +1,10 @@
 import "../styles.css";
 import React from "react";
 import { Button, TextField } from "@mui/material/";
-import { makeStyles } from "@mui/styles/";
-
-const useStyles = makeStyles(() => ({
-  text: {
-    color: "red",
-    textAlign: "center",
-    marginLeft: "5px",
-  },
-}));
 
 function IdTag(props) {
   const { handleSubmitClick, id, setId, display, setDisplay, tag, setTag } =
     props;
-  const inputProps = {
-    color: "white",
-  };
-  const classes = useStyles();
 
   const handleEditClick = () => {
     setDisplay((prev) => !prev);

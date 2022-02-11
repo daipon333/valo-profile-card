@@ -1,14 +1,14 @@
 import "../styles.css";
 import React from "react";
 import logo from "../images/background-image/valorant3.jpeg";
-import { useMediaQuery } from "react-responsive";
+
 import useWindowResize from "./useWindowResize";
 
 function Images(props) {
   const {
     img,
     imgGray,
-    index,
+
     setImageChange,
     setImageChangeSp,
     backgroundImage,

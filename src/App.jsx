@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect } from "react";
+import React from "react";
 import "./styles.css";
 import logo from "./images/background-image/valorant3.jpeg";
 import IdTag from "./components/IdTag";
@@ -9,7 +9,7 @@ import TheBulletHit from "./components/TheBulletHit";
 import getAccountApi from "./components/getAccountApi";
 import useWindowResize from "./components/useWindowResize";
 import SaveButton from "./components/SaveButton";
-import { makeStyles } from "@mui/styles/";
+import { TwitterButton } from "./components/TwitterButton";
 
 function App(props) {
   const [headShots, setHeadShots] = React.useState("");
@@ -91,7 +91,6 @@ function App(props) {
     setBodyShots(Math.round(resultBody * 100) / 100);
     setLegShots(Math.round(resultLeg * 100) / 100);
   };
-  console.log(saveStandby);
 
   const style = {
     backgroundImage: `url(${screenWidth ? imageChange : imageChangeSp})`,
@@ -153,6 +152,10 @@ function App(props) {
           saveStandby={saveStandby}
           setSaveStanby={setSaveStanby}
         />
+        {/* <TwitterButton
+          twitterSwitch={twitterSwitch}
+          setTwitterSwitch={setTwitterSwitch}
+        /> */}
       </div>
     </div>
   );

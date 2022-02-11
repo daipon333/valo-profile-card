@@ -51,7 +51,6 @@ import Sova from "../images/background-image/BGI.Sova.jpg";
 import Cypher from "../images/background-image/BGI.Sypher.jpg";
 import Viper from "../images/background-image/BGI.Viper.jpg";
 import Yoru from "../images/background-image/BGI.Yoru.jpg";
-import logo from "../images/background-image/valorant3.jpeg";
 import Skye from "../images/background-image/BGI.Skye.jpg";
 import Brimstone from "../images/background-image/Brimstone.jpg";
 import Kayo from "../images/background-image/BGI.Kayo.jpg";

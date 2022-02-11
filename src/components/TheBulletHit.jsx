@@ -1,9 +1,6 @@
-import React, { useContext } from "react";
-import getAccountApi from "./getAccountApi";
-import IdTag from "./IdTag";
+import React from "react";
 import "../styles.css";
-import { CircularProgress, LinearProgress } from "@mui/material/";
-import { padding } from "@mui/system";
+import { LinearProgress } from "@mui/material/";
 
 function TheBulletHit(props) {
   const { headShots, bodyShots, legShots, display, progress } = props;
