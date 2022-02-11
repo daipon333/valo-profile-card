@@ -29,9 +29,9 @@ function SaveButton(props) {
       windowHeight: 900,
     }).then((canvas) => {
       const link = document.createElement("a");
-      // link.href = canvas.toDataURL();
-      // link.download = `MyProfile.png`;
-      // link.click();
+      link.href = canvas.toDataURL();
+      link.download = `MyProfile.png`;
+      link.click();
     });
 
     setDeleteButton(!screenWidth ? false : false);
