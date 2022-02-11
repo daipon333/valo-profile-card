@@ -15,7 +15,9 @@ export function TwitterButton(props) {
       </div>
       <div className="share-btn-container">
         <div className="share-btn-close-container">
-          <p className="share-btn-close-text">閉じる</p>
+          <p className="share-btn-close-text" onClick={closeButton}>
+            閉じる
+          </p>
         </div>
         <div className="share-btn-twitter">
           <TwitterShareButton
